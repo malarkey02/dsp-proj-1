@@ -4,12 +4,20 @@ let cBut, sqBut, relBut;
 let circlesSet = [];
 let squaresSet = [];
 
+let controls;
+
 function setup(){
     createCanvas(windowWidth, windowHeight).id("pg");
     background(bgCol);
-    cBut = createButton("Circle"); cBut.id("circle-btn");
-    sqBut = createButton("Square"); sqBut.id("square-btn");
-    relBut = createButton("Reload Page"); relBut.id('reload-btn');
+
+    controls = createDiv("Tools");
+    controls.class("tools-container");
+
+    cBut = createButton("Circle"); cBut.id("circle-btn fn-btn"); cBut.parent(controls);
+    sqBut = createButton("Square"); sqBut.id("square-btn fn-btn"); sqBut.parent(controls);
+    relBut = createButton("Reload Page"); relBut.id('reload-btn fn-btn'); relBut.parent(controls);
+
+
 }
 
 function draw(){
