@@ -7,9 +7,9 @@ let squaresSet = [];
 function setup(){
     createCanvas(windowWidth, windowHeight).id("pg");
     background(bgCol);
-    cBut = createButton("Circle");
-    sqBut = createButton("Square");
-    relBut = createButton("Reload Page");
+    cBut = createButton("Circle"); cBut.id("circle-btn");
+    sqBut = createButton("Square"); sqBut.id("square-btn");
+    relBut = createButton("Reload Page"); relBut.id('reload-btn');
 }
 
 function draw(){
